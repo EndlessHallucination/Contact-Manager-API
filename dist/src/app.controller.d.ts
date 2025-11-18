@@ -3,6 +3,7 @@ import { PrismaService } from './prisma.service';
 export declare class AppController {
     private prisma;
     constructor(prisma: PrismaService);
+    isOk(): boolean;
     createContact(dto: ContactDto): Promise<{
         firstName: string;
         lastName: string;

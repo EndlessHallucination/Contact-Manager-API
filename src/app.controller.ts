@@ -18,6 +18,11 @@ import { ApiTags } from '@nestjs/swagger';
 export class AppController {
     constructor(private prisma: PrismaService) { }
 
+    @Get('is-ok')
+    isOk() {
+        return true;
+    }
+
     @Post('contacts/new')
     async createContact(@Body() dto: ContactDto) {
         return await this.prisma.contact.create({

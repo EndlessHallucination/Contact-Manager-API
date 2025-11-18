@@ -22,6 +22,9 @@ let AppController = class AppController {
     constructor(prisma) {
         this.prisma = prisma;
     }
+    isOk() {
+        return true;
+    }
     async createContact(dto) {
         return await this.prisma.contact.create({
             data: {
@@ -63,6 +66,12 @@ let AppController = class AppController {
     }
 };
 exports.AppController = AppController;
+__decorate([
+    (0, common_1.Get)('is-ok'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], AppController.prototype, "isOk", null);
 __decorate([
     (0, common_1.Post)('contacts/new'),
     __param(0, (0, common_1.Body)()),
