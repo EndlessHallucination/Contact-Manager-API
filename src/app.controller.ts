@@ -20,7 +20,7 @@ export class AppController {
 
     @Get('is-ok')
     isOk() {
-        return true;
+        return { ok: true };
     }
 
     @Post('contacts/new')

@@ -23,7 +23,7 @@ let AppController = class AppController {
         this.prisma = prisma;
     }
     isOk() {
-        return true;
+        return { ok: true };
     }
     async createContact(dto) {
         return await this.prisma.contact.create({
