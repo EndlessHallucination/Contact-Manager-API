@@ -6,7 +6,7 @@
 $ npm install
 ```
 
-## Database pin Prisma setup
+## Database in Prisma setup
 
 install postgres and create table "allcloud"
 
